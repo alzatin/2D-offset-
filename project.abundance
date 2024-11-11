@@ -34,17 +34,17 @@
         {
             "atomType": "Code",
             "name": "Code",
-            "x": 0.5792910447761195,
-            "y": 0.5597667638483965,
+            "x": 0.664179104477612,
+            "y": 0.5918367346938775,
             "uniqueID": 1731354426686,
             "ioValues": [
                 {
                     "name": "input1",
-                    "ioValue": 1731357487044
+                    "ioValue": 1731357603789
                 },
                 {
                     "name": "offset",
-                    "ioValue": 1
+                    "ioValue": 0.5
                 }
             ],
             "description": "Defines a Replicad code block.",
@@ -102,8 +102,8 @@
         {
             "atomType": "Difference",
             "name": "Difference",
-            "x": 0.41324626865671643,
-            "y": 0.3877551020408163,
+            "x": 0.40764925373134325,
+            "y": 0.3848396501457726,
             "uniqueID": 1731357487044,
             "ioValues": [
                 {
@@ -120,13 +120,13 @@
         {
             "atomType": "Rectangle",
             "name": "Rectangle",
-            "x": 0.5083955223880596,
-            "y": 0.20699708454810495,
+            "x": 0.5046641791044776,
+            "y": 0.21282798833819244,
             "uniqueID": 1731357598914,
             "ioValues": [
                 {
                     "name": "x length",
-                    "ioValue": 10
+                    "ioValue": 3
                 },
                 {
                     "name": "y length",
@@ -137,9 +137,9 @@
         },
         {
             "atomType": "Join",
-            "name": "Assembly",
-            "x": 0.6091417910447762,
-            "y": 0.3323615160349854,
+            "name": "Fusion",
+            "x": 0.6436567164179104,
+            "y": 0.30612244897959184,
             "uniqueID": 1731357603789,
             "ioValues": [
                 {
@@ -152,7 +152,7 @@
                 }
             ],
             "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape",
-            "unionType": "Assembly"
+            "unionType": "Fusion"
         }
     ],
     "allConnectors": [
@@ -186,13 +186,6 @@
         },
         {
             "ap1Name": "geometry",
-            "ap2Name": "input1",
-            "ap2Primary": false,
-            "ap1ID": 1731357487044,
-            "ap2ID": 1731354426686
-        },
-        {
-            "ap1Name": "geometry",
             "ap2Name": "Shape 2",
             "ap2Primary": false,
             "ap1ID": 1731357487044,
@@ -204,6 +197,13 @@
             "ap2Primary": false,
             "ap1ID": 1731357598914,
             "ap2ID": 1731357603789
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "input1",
+            "ap2Primary": false,
+            "ap1ID": 1731357603789,
+            "ap2ID": 1731354426686
         }
     ],
     "unitsKey": "Inches",
