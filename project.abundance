@@ -4,7 +4,16 @@
     "x": 0,
     "y": 0,
     "uniqueID": 1731354406588,
-    "ioValues": [],
+    "ioValues": [
+        {
+            "name": "shape",
+            "ioValue": 10
+        },
+        {
+            "name": "offset",
+            "ioValue": 10
+        }
+    ],
     "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
     "topLevel": true,
     "allAtoms": [
@@ -14,22 +23,13 @@
             "x": 0.98,
             "y": 0.5,
             "uniqueID": 1731354416133,
-            "ioValues": [],
-            "description": "Connect geometry here to make it available in the next level up. "
-        },
-        {
-            "atomType": "Circle",
-            "name": "Circle",
-            "x": 0.29133858267716534,
-            "y": 0.41982507288629733,
-            "uniqueID": 1731354421398,
             "ioValues": [
                 {
-                    "name": "diameter",
-                    "ioValue": 10
+                    "name": "number or geometry",
+                    "ioValue": 1731354426686
                 }
             ],
-            "description": "Creates a new circle."
+            "description": "Connect geometry here to make it available in the next level up. "
         },
         {
             "atomType": "Code",
@@ -40,29 +40,63 @@
             "ioValues": [
                 {
                     "name": "input1",
-                    "ioValue": 1731354421398
+                    "ioValue": 10
                 },
                 {
-                    "name": "height",
+                    "name": "offset",
                     "ioValue": 10
                 }
             ],
             "description": "Defines a Replicad code block.",
             "codeVersion": 1,
-            "code": "//Inputs:[input1, height];\n\n\n\nlet shape = library[input1].geometry[0]\nconsole.log(shape)\n\nconst newPlane = new Plane().pivot(0, 'Y');\n\n return { geometry: [shape.clone().extrude(7)], tags: [],\n      color: '#A3CE5B',\n      plane: newPlane}\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
+            "code": "//Inputs:[input1, offset];\n\n\n\nlet shape = library[input1].geometry[0]\nconsole.log(shape)\n\nconst newPlane = new Plane().pivot(0, 'Y');\n\n return { geometry: [shape.offset(offset)], tags: [],\n      color: '#A3CE5B',\n      plane: newPlane,\n      bom:[]}\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
+        },
+        {
+            "atomType": "Input",
+            "name": "shape",
+            "x": 0.04,
+            "y": 0.42857142857142855,
+            "uniqueID": 1731355247212,
+            "ioValues": [],
+            "description": "Adds an input to the parent molecule. If the parent molecule is the top level of the project then the input will be available when the project is shared or imported into another project. Name is editable",
+            "type": "number"
+        },
+        {
+            "atomType": "Input",
+            "name": "offset",
+            "x": 0.04,
+            "y": 0.7492711370262392,
+            "uniqueID": 1731355259023,
+            "ioValues": [],
+            "description": "Adds an input to the parent molecule. If the parent molecule is the top level of the project then the input will be available when the project is shared or imported into another project. Name is editable",
+            "type": "number"
         }
     ],
     "allConnectors": [
         {
             "ap1Name": "geometry",
+            "ap2Name": "number or geometry",
+            "ap2Primary": false,
+            "ap1ID": 1731354426686,
+            "ap2ID": 1731354416133
+        },
+        {
+            "ap1Name": "number or geometry",
             "ap2Name": "input1",
             "ap2Primary": false,
-            "ap1ID": 1731354421398,
+            "ap1ID": 1731355247212,
+            "ap2ID": 1731354426686
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "offset",
+            "ap2Primary": false,
+            "ap1ID": 1731355259023,
             "ap2ID": 1731354426686
         }
     ],
     "unitsKey": "Inches",
     "fileTypeVersion": 1,
-    "compiledBom": {},
+    "compiledBom": [],
     "filetypeVersion": 1
 }
