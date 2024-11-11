@@ -34,7 +34,7 @@
         {
             "atomType": "Code",
             "name": "Code",
-            "x": 0.5468066491688539,
+            "x": 0.5457089552238806,
             "y": 0.5306122448979592,
             "uniqueID": 1731354426686,
             "ioValues": [
@@ -44,7 +44,7 @@
                 },
                 {
                     "name": "offset",
-                    "ioValue": 10
+                    "ioValue": 1
                 }
             ],
             "description": "Defines a Replicad code block.",
