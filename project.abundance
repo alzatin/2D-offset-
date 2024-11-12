@@ -34,17 +34,17 @@
         {
             "atomType": "Code",
             "name": "Code",
-            "x": 0.6455223880597015,
-            "y": 0.7405247813411079,
+            "x": 0.6156491831470335,
+            "y": 0.5510204081632653,
             "uniqueID": 1731354426686,
             "ioValues": [
                 {
                     "name": "input1",
-                    "ioValue": 1731357603789
+                    "ioValue": 10
                 },
                 {
                     "name": "offset",
-                    "ioValue": 0.5
+                    "ioValue": 1
                 }
             ],
             "description": "Defines a Replicad code block.",
@@ -74,85 +74,16 @@
         {
             "atomType": "Circle",
             "name": "Circle",
-            "x": 0.271455223880597,
-            "y": 0.27988338192419826,
+            "x": 0.37747205503009457,
+            "y": 0.29154518950437314,
             "uniqueID": 1731356420727,
             "ioValues": [
                 {
                     "name": "diameter",
-                    "ioValue": 10
+                    "ioValue": 1
                 }
             ],
             "description": "Creates a new circle."
-        },
-        {
-            "atomType": "Circle",
-            "name": "Circle",
-            "x": 0.3805970149253731,
-            "y": 0.15451895043731778,
-            "uniqueID": 1731357478378,
-            "ioValues": [
-                {
-                    "name": "diameter",
-                    "ioValue": 8
-                }
-            ],
-            "description": "Creates a new circle."
-        },
-        {
-            "atomType": "Difference",
-            "name": "Difference",
-            "x": 0.40764925373134325,
-            "y": 0.3848396501457726,
-            "uniqueID": 1731357487044,
-            "ioValues": [
-                {
-                    "name": "geometry2",
-                    "ioValue": 1731357478378
-                },
-                {
-                    "name": "geometry1",
-                    "ioValue": 1731356420727
-                }
-            ],
-            "description": "Subtracts shape two from shape one."
-        },
-        {
-            "atomType": "Rectangle",
-            "name": "Rectangle",
-            "x": 0.5046641791044776,
-            "y": 0.21282798833819244,
-            "uniqueID": 1731357598914,
-            "ioValues": [
-                {
-                    "name": "x length",
-                    "ioValue": 3
-                },
-                {
-                    "name": "y length",
-                    "ioValue": 10
-                }
-            ],
-            "description": "Creates a new rectangle."
-        },
-        {
-            "atomType": "Join",
-            "name": "Fusion",
-            "x": 0.6436567164179104,
-            "y": 0.30612244897959184,
-            "uniqueID": 1731357603789,
-            "ioValues": [
-                {
-                    "name": "Shape 1",
-                    "ioValue": 1731357598914
-                },
-                {
-                    "name": "Shape 2",
-                    "ioValue": 1731357487044
-                }
-            ],
-            "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape",
-            "unionType": "Fusion"
         }
     ],
     "allConnectors": [
@@ -165,44 +96,16 @@
         },
         {
             "ap1Name": "number or geometry",
-            "ap2Name": "offset",
+            "ap2Name": "input1",
             "ap2Primary": false,
-            "ap1ID": 1731355259023,
+            "ap1ID": 1731355247212,
             "ap2ID": 1731354426686
         },
         {
-            "ap1Name": "geometry",
-            "ap2Name": "geometry1",
+            "ap1Name": "number or geometry",
+            "ap2Name": "offset",
             "ap2Primary": false,
-            "ap1ID": 1731356420727,
-            "ap2ID": 1731357487044
-        },
-        {
-            "ap1Name": "geometry",
-            "ap2Name": "geometry2",
-            "ap2Primary": false,
-            "ap1ID": 1731357478378,
-            "ap2ID": 1731357487044
-        },
-        {
-            "ap1Name": "geometry",
-            "ap2Name": "Shape 2",
-            "ap2Primary": false,
-            "ap1ID": 1731357487044,
-            "ap2ID": 1731357603789
-        },
-        {
-            "ap1Name": "geometry",
-            "ap2Name": "Shape 1",
-            "ap2Primary": false,
-            "ap1ID": 1731357598914,
-            "ap2ID": 1731357603789
-        },
-        {
-            "ap1Name": "geometry",
-            "ap2Name": "input1",
-            "ap2Primary": false,
-            "ap1ID": 1731357603789,
+            "ap1ID": 1731355259023,
             "ap2ID": 1731354426686
         }
     ],
