@@ -23,12 +23,7 @@
             "x": 0.98,
             "y": 0.5,
             "uniqueID": 1731354416133,
-            "ioValues": [
-                {
-                    "name": "number or geometry",
-                    "ioValue": 1731382446640
-                }
-            ],
+            "ioValues": [],
             "description": "Connect geometry here to make it available in the next level up. "
         },
         {
@@ -68,8 +63,8 @@
         {
             "atomType": "Code",
             "name": "Code",
-            "x": 0.4860074626865672,
-            "y": 0.7376093294460642,
+            "x": 0.4916044776119403,
+            "y": 0.7201166180758019,
             "uniqueID": 1731382446379,
             "ioValues": [
                 {
@@ -78,7 +73,7 @@
                 },
                 {
                     "name": "offset",
-                    "ioValue": 0
+                    "ioValue": 10
                 }
             ],
             "description": "Defines a Replicad code block.",
@@ -98,7 +93,7 @@
                 },
                 {
                     "name": "offset",
-                    "ioValue": 0
+                    "ioValue": 10
                 }
             ],
             "description": "Defines a Replicad code block.",
@@ -107,7 +102,7 @@
         },
         {
             "atomType": "Join",
-            "name": "Assembly",
+            "name": "Fusion",
             "x": 0.7145522388059701,
             "y": 0.5481049562682215,
             "uniqueID": 1731382446640,
@@ -122,7 +117,7 @@
                 }
             ],
             "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape",
-            "unionType": "Assembly"
+            "unionType": "Fusion"
         }
     ],
     "allConnectors": [
