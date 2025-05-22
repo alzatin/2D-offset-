@@ -23,19 +23,14 @@
             "x": 0.98,
             "y": 0.5,
             "uniqueID": 1731354416133,
-            "ioValues": [
-                {
-                    "name": "number or geometry",
-                    "ioValue": ""
-                }
-            ],
+            "ioValues": [],
             "description": "Connect geometry here to make it available in the next level up. "
         },
         {
             "atomType": "Input",
             "name": "shape",
             "x": 0.04,
-            "y": 0.42857142857142855,
+            "y": 0.4006024096385542,
             "uniqueID": 1731355247212,
             "ioValues": [],
             "description": "Adds an input to the parent molecule. If the parent molecule is the top level of the project then the input will be available when the project is shared or imported into another project. Name is editable",
@@ -45,7 +40,7 @@
             "atomType": "Input",
             "name": "offset",
             "x": 0.04,
-            "y": 0.7492711370262392,
+            "y": 0.8072289156626505,
             "uniqueID": 1731355259023,
             "ioValues": [],
             "description": "Adds an input to the parent molecule. If the parent molecule is the top level of the project then the input will be available when the project is shared or imported into another project. Name is editable",
@@ -54,8 +49,8 @@
         {
             "atomType": "Circle",
             "name": "Circle",
-            "x": 0.3304964539007092,
-            "y": 0.2623906705539359,
+            "x": 0.2544459644322845,
+            "y": 0.31626506024096385,
             "uniqueID": 1731356420727,
             "ioValues": [
                 {
@@ -68,8 +63,8 @@
         {
             "atomType": "Code",
             "name": "Code",
-            "x": 0.48085106382978726,
-            "y": 0.7696793002915452,
+            "x": 0.4240766073871409,
+            "y": 0.5602409638554217,
             "uniqueID": 1731382446379,
             "ioValues": [
                 {
@@ -88,8 +83,8 @@
         {
             "atomType": "Code",
             "name": "Code",
-            "x": 0.43758865248226947,
-            "y": 0.5685131195335277,
+            "x": 0.45348837209302323,
+            "y": 0.28012048192771083,
             "uniqueID": 1731382446243,
             "ioValues": [
                 {
@@ -106,10 +101,10 @@
             "code": "//Inputs:[input1, offset];\n\nlet shape = library[input1].geometry[0]\n\nconst newPlane = new Plane().pivot(0, 'Y');\nconsole.log(shape)\n\n return { geometry: [shape.offset(offset)], tags: [],\n      color: '#A3CE5B',\n      plane: newPlane,\n      bom:[]}\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
         },
         {
-            "atomType": "Join",
+            "atomType": "Assembly",
             "name": "Assembly",
-            "x": 0.6680851063829788,
-            "y": 0.5306122448979592,
+            "x": 0.7229822161422709,
+            "y": 0.5030120481927711,
             "uniqueID": 1731383510086,
             "ioValues": [
                 {
